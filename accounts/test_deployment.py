@@ -1,0 +1,62 @@
+from unittest.mock import patch
+from concurrent.futures import ThreadPoolExecutor
+import os
+from pathlib import Path
+import runpy
+
+from django.core.exceptions import ImproperlyConfigured
+from django.db import OperationalError, connections
+from django.test import SimpleTestCase, TransactionTestCase, skipUnlessDBFeature
+from rest_framework.test import APITestCase
+
+from config.references import next_reference
+from monitoring.models import Incident
+
+
+class HealthCheckTests(APITestCase):
+    def test_health_is_available_without_login(self):
+        result = self.client.get("/api/health/")
+        self.assertEqual(result.status_code, 200)
+        self.assertEqual(result.json(), {"status": "ok"})
+
+    def test_database_failure_is_unhealthy_without_leaking_details(self):
+        with patch("config.health.connection.cursor", side_effect=OperationalError("private database details")):
+            result = self.client.get("/api/health/")
+        self.assertEqual(result.status_code, 503)
+        self.assertEqual(result.json(), {"status": "unavailable"})
+
+
+class ProductionSettingsTests(SimpleTestCase):
+    def read_settings(self, **environment):
+        with patch.dict(os.environ, environment, clear=True):
+            return runpy.run_path(str(Path(__file__).resolve().parents[1] / "config" / "settings.py"))
+
+    def test_mysql_is_default_and_strict(self):
+        database = self.read_settings()["DATABASES"]["default"]
+        self.assertEqual(database["ENGINE"], "django.db.backends.mysql")
+        self.assertEqual(database["OPTIONS"]["charset"], "utf8mb4")
+        self.assertIn("STRICT_TRANS_TABLES", database["OPTIONS"]["init_command"])
+
+    def test_production_requires_secret_and_mysql(self):
+        with self.assertRaises(ImproperlyConfigured):
+            self.read_settings(DJANGO_DEBUG="0")
+        with self.assertRaises(ImproperlyConfigured):
+            self.read_settings(DJANGO_DEBUG="0", DJANGO_SECRET_KEY="x" * 64, DB_ENGINE="sqlite")
+        settings = self.read_settings(DJANGO_DEBUG="0", DJANGO_SECRET_KEY="x" * 64)
+        self.assertTrue(settings["SESSION_COOKIE_SECURE"])
+        self.assertTrue(settings["CSRF_COOKIE_SECURE"])
+        self.assertTrue(settings["SECURE_SSL_REDIRECT"])
+
+
+class MySQLReferenceTests(TransactionTestCase):
+    @skipUnlessDBFeature("has_select_for_update")
+    def test_concurrent_reference_reservations_are_unique(self):
+        def reserve(_):
+            try:
+                return next_reference(Incident, "INC")
+            finally:
+                connections.close_all()
+
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            references = list(executor.map(reserve, range(20)))
+        self.assertEqual(len(set(references)), 20)
