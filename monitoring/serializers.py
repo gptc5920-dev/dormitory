@@ -1,6 +1,7 @@
 from pathlib import Path
 from datetime import date, timedelta
 import math
+from urllib.parse import urlsplit
 
 from django.conf import settings
 from django.utils import timezone
@@ -18,6 +19,34 @@ def _validate_upload_size(upload, limit, label):
 
 
 class CameraSourceSerializer(serializers.ModelSerializer):
+    stream_url = serializers.CharField(write_only=True, required=False, allow_blank=True, max_length=500)
+    has_stream_url = serializers.SerializerMethodField()
+
+    def get_has_stream_url(self, obj):
+        return bool(obj.stream_url)
+
+    def validate_stream_url(self, value):
+        if not value:
+            return value
+        try:
+            parsed = urlsplit(value)
+            if parsed.scheme != "rtsp" or not parsed.hostname or any(c.isspace() for c in value):
+                raise ValueError
+            if parsed.port is not None and not 1 <= parsed.port <= 65535:
+                raise ValueError
+        except ValueError:
+            raise serializers.ValidationError("Enter a valid rtsp:// camera stream URL.")
+        return value
+
+    def validate(self, attrs):
+        source_type = attrs.get("source_type", getattr(self.instance, "source_type", "webcam"))
+        stream_url = attrs.get("stream_url", getattr(self.instance, "stream_url", ""))
+        if source_type == "ip_camera" and not stream_url:
+            raise serializers.ValidationError({"stream_url": "A Wi-Fi / IP camera requires an RTSP stream URL."})
+        if source_type != "ip_camera":
+            attrs["stream_url"] = ""
+        return attrs
+
     room_number = serializers.CharField(source="room.number", read_only=True)
     room = serializers.PrimaryKeyRelatedField(
         queryset=Room.objects.filter(is_active=True), required=False, allow_null=True
@@ -25,7 +54,7 @@ class CameraSourceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CameraSource
-        fields = ["id", "name", "source_type", "location", "room", "room_number", "is_enabled"]
+        fields = ["id", "name", "source_type", "location", "room", "room_number", "is_enabled", "stream_url", "has_stream_url"]
 
 
 class IncidentSerializer(serializers.ModelSerializer):

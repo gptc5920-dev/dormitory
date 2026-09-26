@@ -1,3 +1,4 @@
+import json
 import os
 from pathlib import Path
 from django.core.exceptions import ImproperlyConfigured
@@ -54,14 +55,19 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 DB_ENGINE = os.environ.get("DB_ENGINE", "mysql")
+local_database_path = BASE_DIR / "config" / "database.local.json"
+local_database = {}
+if DEBUG and local_database_path.is_file():
+    local_database = json.loads(local_database_path.read_text(encoding="utf-8"))
+
 if DB_ENGINE == "mysql":
     DATABASES = {"default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": os.environ.get("MYSQL_DATABASE", "dormitory"),
-        "USER": os.environ.get("MYSQL_USER", "dormitory"),
-        "PASSWORD": os.environ.get("MYSQL_PASSWORD", ""),
-        "HOST": os.environ.get("MYSQL_HOST", "127.0.0.1"),
-        "PORT": os.environ.get("MYSQL_PORT", "3306"),
+        "NAME": os.environ.get("MYSQL_DATABASE", local_database.get("NAME", "dormitory")),
+        "USER": os.environ.get("MYSQL_USER", local_database.get("USER", "root" if DEBUG else "dormitory")),
+        "PASSWORD": os.environ.get("MYSQL_PASSWORD", local_database.get("PASSWORD", "")),
+        "HOST": os.environ.get("MYSQL_HOST", local_database.get("HOST", "127.0.0.1")),
+        "PORT": os.environ.get("MYSQL_PORT", local_database.get("PORT", "3306")),
         "CONN_MAX_AGE": 60,
         "CONN_HEALTH_CHECKS": True,
         "OPTIONS": {
@@ -69,7 +75,7 @@ if DB_ENGINE == "mysql":
             "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
             "isolation_level": "read committed",
         },
-        "TEST": {"CHARSET": "utf8mb4", "COLLATION": "utf8mb4_0900_as_cs"},
+        "TEST": {"CHARSET": "utf8mb4", "COLLATION": "utf8mb4_bin"},
     }}
 elif DB_ENGINE == "sqlite" and DEBUG:
     # Explicit opt-in only for local tests and exporting the old database.

@@ -60,24 +60,21 @@ def process_video_job(job):
     job.status = VideoJob.Status.PROCESSING
     job.error = ""
     job.save(update_fields=["status", "error"])
-    capture = cv2.VideoCapture(str(Path(job.video.path)))
-    if not capture.isOpened():
-        job.status = VideoJob.Status.FAILED
-        job.error = "OpenCV could not open this video. Use a common MP4, AVI, or MOV codec."
-        job.completed_at = timezone.now()
-        job.save(update_fields=["status", "error", "completed_at"])
-        return job
-
+    capture = None
     frame_index = 0
     sampled = 0
     incident_count = 0
     try:
+        capture = cv2.VideoCapture(str(Path(job.video.path)))
+        if not capture.isOpened():
+            raise ValueError("OpenCV could not open this video. Use a common MP4, AVI, or MOV codec.")
         while sampled < settings.VIDEO_MAX_SAMPLED_FRAMES:
             success, frame = capture.read()
             if not success:
                 break
             frame_index += 1
-            if frame_index % settings.VIDEO_SAMPLE_EVERY_FRAMES:
+            # Include the first frame so clips shorter than the interval are analyzed.
+            if (frame_index - 1) % settings.VIDEO_SAMPLE_EVERY_FRAMES:
                 continue
             sampled += 1
             detections = detector.detect(frame)
@@ -85,12 +82,15 @@ def process_video_job(job):
                 frame, detections, job.source_name, room=job.room, cooldown_scope=f"video-{job.pk}"
             )
             incident_count += len(incidents)
+        if sampled == 0:
+            raise ValueError("OpenCV could not decode any frames from this video.")
         job.status = VideoJob.Status.COMPLETED
     except Exception as exc:
         job.status = VideoJob.Status.FAILED
         job.error = str(exc)
     finally:
-        capture.release()
+        if capture is not None:
+            capture.release()
         job.frames_processed = sampled
         job.incidents_created = incident_count
         job.completed_at = timezone.now()

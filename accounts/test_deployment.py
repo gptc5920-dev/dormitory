@@ -37,6 +37,25 @@ class ProductionSettingsTests(SimpleTestCase):
         self.assertEqual(database["OPTIONS"]["charset"], "utf8mb4")
         self.assertIn("STRICT_TRANS_TABLES", database["OPTIONS"]["init_command"])
 
+    def test_local_database_defaults_and_environment_precedence(self):
+        with patch.object(Path, "is_file", return_value=True), patch.object(
+            Path, "read_text", return_value='{"USER":"root","PORT":"3307","PASSWORD":""}'
+        ):
+            database = self.read_settings()["DATABASES"]["default"]
+            self.assertEqual(database["USER"], "root")
+            self.assertEqual(database["PORT"], "3307")
+            self.assertEqual(database["PASSWORD"], "")
+            overridden = self.read_settings(MYSQL_USER="custom", MYSQL_PORT="3308")["DATABASES"]["default"]
+            self.assertEqual(overridden["USER"], "custom")
+            self.assertEqual(overridden["PORT"], "3308")
+
+    def test_production_ignores_local_database_file(self):
+        with patch.object(Path, "read_text") as read_local:
+            database = self.read_settings(DJANGO_DEBUG="0", DJANGO_SECRET_KEY="x" * 64)["DATABASES"]["default"]
+            read_local.assert_not_called()
+            self.assertEqual(database["USER"], "dormitory")
+            self.assertEqual(database["PORT"], "3306")
+
     def test_production_requires_secret_and_mysql(self):
         with self.assertRaises(ImproperlyConfigured):
             self.read_settings(DJANGO_DEBUG="0")

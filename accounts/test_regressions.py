@@ -23,6 +23,23 @@ class AuditRegressionTests(APITestCase):
         self.user.refresh_from_db()
         self.assertTrue(self.user.check_password("Changed123!"))
 
+    def test_password_whitespace_is_preserved_on_create_and_update(self):
+        password = "  StrongPass123!  "
+        response = self.client.post("/api/users/", {
+            "username": "whitespace", "password": password, "role": "manager",
+        }, format="json")
+        self.assertEqual(response.status_code, 201)
+        created = User.objects.get(pk=response.data["id"])
+        self.assertTrue(created.check_password(password))
+        password = "  ChangedPass456!  "
+        response = self.client.patch(f"/api/users/{created.pk}/", {"password": password}, format="json")
+        self.assertEqual(response.status_code, 200)
+        self.client.credentials()
+        response = self.client.post("/api/auth/login/", {
+            "username": created.username, "password": password,
+        }, format="json")
+        self.assertEqual(response.status_code, 200)
+
     def test_nonfinite_confidence_is_rejected_without_saving(self):
         incident = Incident.objects.create(incident_type="manual", confidence=0.5)
         for value in ["NaN", "Infinity", "-Infinity"]:

@@ -17,6 +17,7 @@ from monitoring.views import (
 from tenants.views import RoomViewSet, TenantViewSet
 from violations.views import DormitoryRuleViewSet, ViolationViewSet, WarningViewSet
 from .health import health
+from .views import index
 
 
 router = DefaultRouter()
@@ -31,6 +32,7 @@ router.register("camera-sources", CameraSourceViewSet)
 router.register("video-jobs", VideoJobViewSet)
 
 urlpatterns = [
+    path("", index, name="backend-index"),
     path("api/health/", health, name="health"),
     path("admin/", admin.site.urls),
     path("api/auth/login/", LoginView.as_view(), name="login"),

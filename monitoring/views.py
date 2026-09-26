@@ -1,4 +1,5 @@
 from datetime import datetime, time, timedelta
+import base64
 
 import cv2
 import numpy as np
@@ -39,6 +40,41 @@ class CameraSourceViewSet(viewsets.ModelViewSet):
     queryset = CameraSource.objects.select_related("room").all()
     serializer_class = CameraSourceSerializer
     permission_classes = [IsDormitoryManager]
+
+    @decorators.action(detail=True, methods=["post"])
+    def snapshot(self, request, pk=None):
+        source = self.get_object()
+        if not source.is_enabled or source.source_type != "ip_camera" or not source.stream_url:
+            return Response({"detail": "Configure and enable this IP camera first."}, status=400)
+        # Validate legacy records too; never pass file paths or arbitrary protocols to OpenCV.
+        self.get_serializer().validate_stream_url(source.stream_url)
+        capture = cv2.VideoCapture()
+        try:
+            opened = capture.open(source.stream_url, cv2.CAP_FFMPEG, [
+                cv2.CAP_PROP_OPEN_TIMEOUT_MSEC, 5000,
+                cv2.CAP_PROP_READ_TIMEOUT_MSEC, 5000,
+            ])
+            ok, frame = capture.read() if opened else (False, None)
+            if not ok or frame is None:
+                raise ValueError("No frame")
+        except (cv2.error, ValueError):
+            return Response({"detail": "Cannot reach the CCTV stream. Check its RTSP URL, camera credentials, and the server's network connection."}, status=502)
+        finally:
+            capture.release()
+        # Bound preview size and transfer cost.
+        height, width = frame.shape[:2]
+        if width > 1280:
+            frame = cv2.resize(frame, (1280, max(1, round(height * 1280 / width))))
+        ok, encoded = cv2.imencode(".jpg", frame)
+        if not ok:
+            return Response({"detail": "Unable to encode the camera frame."}, status=502)
+        detections = detector.detect(frame) if request.data.get("detect") is True else []
+        incidents = create_detection_incidents(frame, detections, source.name, room=source.room, source=source) if detections else []
+        return Response({
+            "image": "data:image/jpeg;base64," + base64.b64encode(encoded).decode("ascii"),
+            "detections": [item.as_dict() for item in detections],
+            "incidents_created": IncidentSerializer(incidents, many=True, context={"request": request}).data,
+        }, headers={"Cache-Control": "no-store"})
 
 
 class IncidentViewSet(viewsets.ModelViewSet):
