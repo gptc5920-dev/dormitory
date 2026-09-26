@@ -15,3 +15,25 @@ class BackendIndexTests(SimpleTestCase):
     def test_index_supports_head_and_rejects_writes(self):
         self.assertEqual(self.client.head("/").status_code, 200)
         self.assertEqual(self.client.post("/").status_code, 405)
+
+
+class FrontendCorsTests(SimpleTestCase):
+    def preflight(self, origin):
+        return self.client.options(
+            "/api/auth/login/",
+            HTTP_ORIGIN=origin,
+            HTTP_ACCESS_CONTROL_REQUEST_METHOD="POST",
+            HTTP_ACCESS_CONTROL_REQUEST_HEADERS="content-type,authorization",
+        )
+
+    def test_deployed_frontend_can_preflight_login(self):
+        origin = "http://vw808c8k4o004o0cc0ws8w4s.76.13.217.76.sslip.io"
+        response = self.preflight(origin)
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.headers["Access-Control-Allow-Origin"], origin)
+        self.assertIn("POST", response.headers["Access-Control-Allow-Methods"])
+        self.assertIn("authorization", response.headers["Access-Control-Allow-Headers"])
+
+    def test_unrelated_origin_is_not_allowed(self):
+        response = self.preflight("http://unrelated.example")
+        self.assertNotIn("Access-Control-Allow-Origin", response.headers)

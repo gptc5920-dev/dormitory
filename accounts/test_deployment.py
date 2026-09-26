@@ -56,6 +56,10 @@ class ProductionSettingsTests(SimpleTestCase):
             self.assertEqual(database["USER"], "dormitory")
             self.assertEqual(database["PORT"], "3306")
 
+    def test_cors_environment_overrides_default_frontend_origins(self):
+        settings = self.read_settings(CORS_ALLOWED_ORIGINS="https://custom.example")
+        self.assertEqual(settings["CORS_ALLOWED_ORIGINS"], ["https://custom.example"])
+
     def test_production_requires_secret_and_mysql(self):
         with self.assertRaises(ImproperlyConfigured):
             self.read_settings(DJANGO_DEBUG="0")

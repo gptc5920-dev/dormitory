@@ -31,6 +31,13 @@ Configure runtime environment variables in Coolify:
 - `MYSQL_DATABASE=dormitory`
 - `MYSQL_USER` and `MYSQL_PASSWORD`: the deployed database credentials
 
+For the current frontend deployment, set
+`CORS_ALLOWED_ORIGINS=http://vw808c8k4o004o0cc0ws8w4s.76.13.217.76.sslip.io`.
+Use the origin only, without `/login` or a trailing slash. This origin is also
+in the code defaults; a Coolify environment value replaces those defaults.
+Redeploy the backend after changing it. If the frontend moves to HTTPS,
+update the allowed origin to match its new scheme exactly.
+
 Use a supported database server, such as MySQL 8.4. The local MariaDB 10.4
 instance is too old for the current Django version. Configure persistent
 storage for `/app/media` and, if using uploaded model weights, `/app/models`.

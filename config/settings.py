@@ -117,7 +117,9 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = "DENY"
 
 CORS_ALLOWED_ORIGINS = [origin.strip() for origin in os.environ.get(
-    "CORS_ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173"
+    "CORS_ALLOWED_ORIGINS",
+    "http://localhost:5173,http://127.0.0.1:5173,"
+    "http://vw808c8k4o004o0cc0ws8w4s.76.13.217.76.sslip.io"
 ).split(",") if origin.strip()]
 
 REST_FRAMEWORK = {
