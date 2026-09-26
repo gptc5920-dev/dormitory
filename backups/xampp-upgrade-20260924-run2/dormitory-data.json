@@ -1,0 +1,1156 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 6,
+    "codename": "add_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 6,
+    "codename": "change_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 6,
+    "codename": "delete_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 6,
+    "codename": "view_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 7,
+    "codename": "add_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 7,
+    "codename": "change_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 7,
+    "codename": "delete_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 7,
+    "codename": "view_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 8,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 8,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 8,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 8,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add reference sequence",
+    "content_type": 9,
+    "codename": "add_referencesequence"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change reference sequence",
+    "content_type": 9,
+    "codename": "change_referencesequence"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete reference sequence",
+    "content_type": 9,
+    "codename": "delete_referencesequence"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view reference sequence",
+    "content_type": 9,
+    "codename": "view_referencesequence"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add room",
+    "content_type": 10,
+    "codename": "add_room"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change room",
+    "content_type": 10,
+    "codename": "change_room"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete room",
+    "content_type": 10,
+    "codename": "delete_room"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view room",
+    "content_type": 10,
+    "codename": "view_room"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add tenant",
+    "content_type": 11,
+    "codename": "add_tenant"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change tenant",
+    "content_type": 11,
+    "codename": "change_tenant"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete tenant",
+    "content_type": 11,
+    "codename": "delete_tenant"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view tenant",
+    "content_type": 11,
+    "codename": "view_tenant"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add detection cooldown",
+    "content_type": 12,
+    "codename": "add_detectioncooldown"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change detection cooldown",
+    "content_type": 12,
+    "codename": "change_detectioncooldown"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete detection cooldown",
+    "content_type": 12,
+    "codename": "delete_detectioncooldown"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view detection cooldown",
+    "content_type": 12,
+    "codename": "view_detectioncooldown"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add camera source",
+    "content_type": 13,
+    "codename": "add_camerasource"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change camera source",
+    "content_type": 13,
+    "codename": "change_camerasource"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete camera source",
+    "content_type": 13,
+    "codename": "delete_camerasource"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view camera source",
+    "content_type": 13,
+    "codename": "view_camerasource"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add incident",
+    "content_type": 14,
+    "codename": "add_incident"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change incident",
+    "content_type": 14,
+    "codename": "change_incident"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete incident",
+    "content_type": 14,
+    "codename": "delete_incident"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view incident",
+    "content_type": 14,
+    "codename": "view_incident"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add video job",
+    "content_type": 15,
+    "codename": "add_videojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change video job",
+    "content_type": 15,
+    "codename": "change_videojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete video job",
+    "content_type": 15,
+    "codename": "delete_videojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view video job",
+    "content_type": 15,
+    "codename": "view_videojob"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 61,
+  "fields": {
+    "name": "Can add dormitory rule",
+    "content_type": 16,
+    "codename": "add_dormitoryrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 62,
+  "fields": {
+    "name": "Can change dormitory rule",
+    "content_type": 16,
+    "codename": "change_dormitoryrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 63,
+  "fields": {
+    "name": "Can delete dormitory rule",
+    "content_type": 16,
+    "codename": "delete_dormitoryrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 64,
+  "fields": {
+    "name": "Can view dormitory rule",
+    "content_type": 16,
+    "codename": "view_dormitoryrule"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 65,
+  "fields": {
+    "name": "Can add violation",
+    "content_type": 17,
+    "codename": "add_violation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 66,
+  "fields": {
+    "name": "Can change violation",
+    "content_type": 17,
+    "codename": "change_violation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 67,
+  "fields": {
+    "name": "Can delete violation",
+    "content_type": 17,
+    "codename": "delete_violation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 68,
+  "fields": {
+    "name": "Can view violation",
+    "content_type": 17,
+    "codename": "view_violation"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 69,
+  "fields": {
+    "name": "Can add warning",
+    "content_type": 18,
+    "codename": "add_warning"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 70,
+  "fields": {
+    "name": "Can change warning",
+    "content_type": 18,
+    "codename": "change_warning"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 71,
+  "fields": {
+    "name": "Can delete warning",
+    "content_type": 18,
+    "codename": "delete_warning"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 72,
+  "fields": {
+    "name": "Can view warning",
+    "content_type": 18,
+    "codename": "view_warning"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "tokenproxy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "accounts",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "accounts",
+    "model": "referencesequence"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "tenants",
+    "model": "room"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "tenants",
+    "model": "tenant"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "monitoring",
+    "model": "detectioncooldown"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "monitoring",
+    "model": "camerasource"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "monitoring",
+    "model": "incident"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "monitoring",
+    "model": "videojob"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "violations",
+    "model": "dormitoryrule"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 17,
+  "fields": {
+    "app_label": "violations",
+    "model": "violation"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 18,
+  "fields": {
+    "app_label": "violations",
+    "model": "warning"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "d524a6fec06b2bc76ab944fb95c2d8ae82c0dfc1",
+  "fields": {
+    "user": 1,
+    "created": "2026-09-18T11:13:31.647Z"
+  }
+},
+{
+  "model": "accounts.referencesequence",
+  "pk": 1,
+  "fields": {
+    "key": "monitoring.incident:INC-2026-",
+    "value": 3
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$C9QbrQeOo9gL62E5aqzGf1$s4p5zkBjjCUXrDoTlvNgfPPkSKlqwkSlq2XPKH6LJdE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "manager",
+    "first_name": "Dormitory",
+    "last_name": "Manager",
+    "email": "manager@example.test",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-18T10:50:32.258Z",
+    "role": "manager",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$lUlfzvJkpsgaTKZaHup3y1$60XN26mgxOW6BnBDe3zJ6BFzRcttuWmSzgmpc28Y/P8=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "System",
+    "last_name": "Administrator",
+    "email": "admin@example.test",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-18T10:50:34.675Z",
+    "role": "admin",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tenants.room",
+  "pk": 1,
+  "fields": {
+    "number": "101",
+    "floor": 1,
+    "capacity": 4,
+    "description": "East wing",
+    "is_active": true
+  }
+},
+{
+  "model": "tenants.room",
+  "pk": 2,
+  "fields": {
+    "number": "102",
+    "floor": 1,
+    "capacity": 3,
+    "description": "East wing",
+    "is_active": true
+  }
+},
+{
+  "model": "tenants.room",
+  "pk": 3,
+  "fields": {
+    "number": "201",
+    "floor": 2,
+    "capacity": 4,
+    "description": "North wing",
+    "is_active": true
+  }
+},
+{
+  "model": "tenants.room",
+  "pk": 4,
+  "fields": {
+    "number": "room",
+    "floor": 6,
+    "capacity": 4,
+    "description": "For Girls only",
+    "is_active": true
+  }
+},
+{
+  "model": "tenants.tenant",
+  "pk": 1,
+  "fields": {
+    "reference": "TEN-2026-0001",
+    "first_name": "Jordan",
+    "last_name": "Lee",
+    "email": "jordan.lee@example.test",
+    "phone": "09170000001",
+    "emergency_contact": "",
+    "room": 1,
+    "enrolled_on": "2026-08-18",
+    "move_in_date": "2026-08-18",
+    "is_active": true,
+    "notes": ""
+  }
+},
+{
+  "model": "tenants.tenant",
+  "pk": 2,
+  "fields": {
+    "reference": "TEN-2026-0002",
+    "first_name": "Casey",
+    "last_name": "Santos",
+    "email": "casey.santos@example.test",
+    "phone": "09170000002",
+    "emergency_contact": "",
+    "room": 2,
+    "enrolled_on": "2026-08-18",
+    "move_in_date": "2026-08-18",
+    "is_active": true,
+    "notes": ""
+  }
+},
+{
+  "model": "monitoring.camerasource",
+  "pk": 1,
+  "fields": {
+    "name": "Lobby browser camera",
+    "source_type": "webcam",
+    "location": "Main lobby",
+    "stream_url": "",
+    "room": null,
+    "is_enabled": true
+  }
+},
+{
+  "model": "monitoring.camerasource",
+  "pk": 2,
+  "fields": {
+    "name": "room 1",
+    "source_type": "webcam",
+    "location": "ground floor",
+    "stream_url": "",
+    "room": 1,
+    "is_enabled": true
+  }
+},
+{
+  "model": "monitoring.incident",
+  "pk": 1,
+  "fields": {
+    "reference": "INC-2026-0001",
+    "incident_type": "manual",
+    "status": "assigned",
+    "confidence": null,
+    "details": "Sample verified quiet-hours report.",
+    "detected_labels": [],
+    "occurred_at": "2026-08-18T10:50:37.244Z",
+    "snapshot": "",
+    "source": 1,
+    "source_name": "Lobby browser camera",
+    "room": 1,
+    "verified_by": 1,
+    "verified_at": "2026-08-18T10:50:37.242Z",
+    "assigned_tenant": 1,
+    "review_notes": "Seeded manager verification."
+  }
+},
+{
+  "model": "monitoring.incident",
+  "pk": 2,
+  "fields": {
+    "reference": "INC-2026-0002",
+    "incident_type": "bottle",
+    "status": "reviewed",
+    "confidence": null,
+    "details": "FGFGN",
+    "detected_labels": [],
+    "occurred_at": "2026-08-19T09:37:45.899Z",
+    "snapshot": "",
+    "source": null,
+    "source_name": "",
+    "room": 1,
+    "verified_by": null,
+    "verified_at": null,
+    "assigned_tenant": null,
+    "review_notes": "Reviewed in incident queue."
+  }
+},
+{
+  "model": "monitoring.incident",
+  "pk": 3,
+  "fields": {
+    "reference": "INC-2026-0003",
+    "incident_type": "person",
+    "status": "dismissed",
+    "confidence": null,
+    "details": "tenant",
+    "detected_labels": [],
+    "occurred_at": "2026-09-18T09:32:32.428Z",
+    "snapshot": "",
+    "source": null,
+    "source_name": "",
+    "room": null,
+    "verified_by": 1,
+    "verified_at": "2026-09-18T09:32:52.350Z",
+    "assigned_tenant": null,
+    "review_notes": "Dismissed by manager."
+  }
+},
+{
+  "model": "monitoring.videojob",
+  "pk": 1,
+  "fields": {
+    "video": "uploads/videos/2026/09/videoplayback.mp4",
+    "source_name": "Uploaded corridor video",
+    "room": null,
+    "status": "completed",
+    "frames_processed": 12,
+    "incidents_created": 0,
+    "error": "",
+    "created_by": 1,
+    "created_at": "2026-09-18T10:02:49.860Z",
+    "completed_at": "2026-09-18T10:02:50.681Z"
+  }
+},
+{
+  "model": "monitoring.videojob",
+  "pk": 2,
+  "fields": {
+    "video": "uploads/videos/2026/09/videoplayback_TDPF3os.mp4",
+    "source_name": "Uploaded corridor video",
+    "room": null,
+    "status": "completed",
+    "frames_processed": 12,
+    "incidents_created": 0,
+    "error": "",
+    "created_by": 1,
+    "created_at": "2026-09-18T10:02:56.111Z",
+    "completed_at": "2026-09-18T10:02:56.512Z"
+  }
+},
+{
+  "model": "monitoring.videojob",
+  "pk": 3,
+  "fields": {
+    "video": "uploads/videos/2026/09/videoplayback_hJXrO7j.mp4",
+    "source_name": "Uploaded corridor video",
+    "room": null,
+    "status": "completed",
+    "frames_processed": 12,
+    "incidents_created": 0,
+    "error": "",
+    "created_by": 1,
+    "created_at": "2026-09-18T10:03:51.051Z",
+    "completed_at": "2026-09-18T10:03:51.448Z"
+  }
+},
+{
+  "model": "violations.dormitoryrule",
+  "pk": 1,
+  "fields": {
+    "code": "DR-001",
+    "title": "Quiet hours",
+    "category": "Conduct",
+    "description": "Keep noise to a minimum from 10:00 PM to 7:00 AM.",
+    "severity": "medium",
+    "is_active": true,
+    "created_at": "2026-08-18T10:50:37.033Z"
+  }
+},
+{
+  "model": "violations.dormitoryrule",
+  "pk": 2,
+  "fields": {
+    "code": "DR-002",
+    "title": "No alcohol containers",
+    "category": "Safety",
+    "description": "Alcoholic drinks and their containers are prohibited in residence areas.",
+    "severity": "high",
+    "is_active": true,
+    "created_at": "2026-08-18T10:50:37.045Z"
+  }
+},
+{
+  "model": "violations.dormitoryrule",
+  "pk": 3,
+  "fields": {
+    "code": "DR-003",
+    "title": "Fire safety",
+    "category": "Safety",
+    "description": "Open flames, smoking, and tampering with fire equipment are prohibited.",
+    "severity": "critical",
+    "is_active": true,
+    "created_at": "2026-08-18T10:50:37.057Z"
+  }
+},
+{
+  "model": "violations.dormitoryrule",
+  "pk": 4,
+  "fields": {
+    "code": "DR-004",
+    "title": "Guest registration",
+    "category": "Security",
+    "description": "All visitors must be registered and follow guest hours.",
+    "severity": "medium",
+    "is_active": true,
+    "created_at": "2026-08-18T10:50:37.068Z"
+  }
+},
+{
+  "model": "violations.warning",
+  "pk": 1,
+  "fields": {
+    "reference": "WRN-2026-0001",
+    "tenant": 1,
+    "rule": 1,
+    "incident": 1,
+    "message": "Please observe quiet hours.",
+    "issued_by": 1,
+    "issued_at": "2026-08-18T10:50:37.260Z",
+    "acknowledged": false
+  }
+},
+{
+  "model": "violations.warning",
+  "pk": 2,
+  "fields": {
+    "reference": "WRN-2026-0002",
+    "tenant": 1,
+    "rule": 2,
+    "incident": null,
+    "message": "GNG",
+    "issued_by": 1,
+    "issued_at": "2026-08-19T09:38:08.954Z",
+    "acknowledged": false
+  }
+},
+{
+  "model": "violations.violation",
+  "pk": 1,
+  "fields": {
+    "reference": "VIO-2026-0001",
+    "tenant": 1,
+    "rule": 1,
+    "incident": 1,
+    "description": "Verified repeat noise report for demonstration.",
+    "action_taken": "Manager counselling",
+    "evidence": "",
+    "recorded_by": 1,
+    "recorded_at": "2026-08-18T10:50:37.280Z"
+  }
+}
+]

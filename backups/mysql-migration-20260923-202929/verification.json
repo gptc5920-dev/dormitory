@@ -1,0 +1,11 @@
+{
+  "database": "dormitory",
+  "server": "127.0.0.1:3307",
+  "objects_verified": 24,
+  "all_model_counts_match": true,
+  "foreign_keys_valid": true,
+  "auto_increment_valid": true,
+  "sqlite_unchanged": true,
+  "media_backup_matches": true,
+  "missing_media_count": 0
+}

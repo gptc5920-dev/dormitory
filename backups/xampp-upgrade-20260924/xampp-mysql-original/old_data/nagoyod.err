@@ -1,0 +1,409 @@
+2026-06-19 20:15:24 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 6068
+2026-06-19 20:15:24 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:15:24 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:15:24 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:15:24 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:15:24 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:15:24 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:15:24 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:15:24 0 [Note] InnoDB: Starting crash recovery from checkpoint LSN=1838676
+2026-06-19 20:15:25 0 [Note] InnoDB: Starting final batch to recover 1 pages from redo log.
+2026-06-19 20:15:25 0 [Note] InnoDB: Resizing redo log from 2*5242880 to 2*50331648 bytes; LSN=1839012
+2026-06-19 20:15:25 0 [Note] InnoDB: Starting to delete and rewrite log files.
+2026-06-19 20:15:25 0 [Note] InnoDB: Setting log file .\ib_logfile101 size to 50331648 bytes
+2026-06-19 20:15:25 0 [Note] InnoDB: Setting log file .\ib_logfile1 size to 50331648 bytes
+2026-06-19 20:15:25 0 [Note] InnoDB: Renaming log file .\ib_logfile101 to .\ib_logfile0
+2026-06-19 20:15:25 0 [Note] InnoDB: New log files created, LSN=1839012
+2026-06-19 20:15:25 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:15:25 0 [Note] InnoDB: Removed temporary tablespace data file: "ibtmp1"
+2026-06-19 20:15:25 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:15:25 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:15:25 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:15:25 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:15:25 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839012; transaction id 3146
+2026-06-19 20:15:25 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:15:25 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:15:25 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:15:25
+2026-06-19 20:15:25 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:15:25 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:15:25 0 [ERROR] Aborting
+2026-06-19 20:17:58 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 15532
+2026-06-19 20:17:58 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:17:58 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:17:58 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:17:58 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:17:58 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:17:58 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:17:58 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:17:58 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:17:58 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:17:58 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:17:58 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:17:58 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:17:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839125; transaction id 3146
+2026-06-19 20:17:59 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:17:59 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:17:59 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:17:59
+2026-06-19 20:17:59 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:17:59 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:17:59 0 [ERROR] Aborting
+2026-06-19 20:19:19 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 19688
+2026-06-19 20:19:19 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:19:19 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:19:19 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:19:19 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:19:19 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:19:19 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:19:19 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:19:19 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:19:19 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:19:19 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:19:19 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:19:19 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:19:19 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839134; transaction id 3146
+2026-06-19 20:19:19 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:19:19 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:19:19 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:19:19
+2026-06-19 20:19:19 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:19:19 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:19:19 0 [ERROR] Aborting
+2026-06-19 20:20:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 25176
+2026-06-19 20:20:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:20:59 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:20:59 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:20:59 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:20:59 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:20:59 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:20:59 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:20:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:20:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:20:59 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:20:59 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:20:59 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:20:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839143; transaction id 3146
+2026-06-19 20:20:59 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:20:59 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:20:59 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:20:59
+2026-06-19 20:20:59 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:20:59 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:20:59 0 [ERROR] Aborting
+2026-06-19 20:21:38 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 25276
+2026-06-19 20:21:38 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:21:38 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:21:38 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:21:38 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:21:38 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:21:38 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:21:38 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:21:38 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:21:38 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:21:38 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:21:38 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:21:38 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:21:38 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839152; transaction id 3146
+2026-06-19 20:21:38 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:21:38 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:21:38 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:21:38
+2026-06-19 20:21:38 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:21:38 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:21:38 0 [ERROR] Aborting
+2026-06-19 20:24:54 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 11324
+2026-06-19 20:24:54 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:24:54 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:24:54 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:24:54 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:24:54 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:24:54 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:24:54 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:24:54 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:24:54 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:24:54 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:24:54 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:24:54 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:24:54 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839161; transaction id 3146
+2026-06-19 20:24:54 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:24:54 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:24:54 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:24:54
+2026-06-19 20:24:54 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:24:54 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:24:54 0 [ERROR] Aborting
+2026-06-19 20:25:25 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 25564
+2026-06-19 20:25:25 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:25:25 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:25:25 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:25:25 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:25:25 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:25:25 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:25:25 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:25:25 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:25:25 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:25:25 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:25:25 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:25:25 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:25:25 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839170; transaction id 3146
+2026-06-19 20:25:25 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:25:25 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:25:25 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:25:25
+2026-06-19 20:25:25 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:25:25 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:25:25 0 [ERROR] Aborting
+2026-06-19 20:25:59 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 4984
+2026-06-19 20:25:59 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:25:59 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:25:59 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:25:59 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:25:59 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:25:59 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:25:59 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:25:59 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:25:59 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:25:59 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:25:59 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:25:59 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:25:59 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839179; transaction id 3146
+2026-06-19 20:25:59 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:25:59 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:25:59 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:25:59
+2026-06-19 20:25:59 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:25:59 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:25:59 0 [ERROR] Aborting
+2026-06-19 20:26:45 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 5984
+2026-06-19 20:26:45 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:26:45 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:26:45 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:26:45 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:26:45 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:26:45 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:26:45 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:26:45 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:26:45 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:26:46 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:26:46 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:26:46 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:26:46 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839188; transaction id 3146
+2026-06-19 20:26:46 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:26:46 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:26:46 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:26:46
+2026-06-19 20:26:46 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:26:46 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:26:46 0 [ERROR] Aborting
+2026-06-19 20:28:33 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 20088
+2026-06-19 20:28:33 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:28:33 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:28:33 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:28:33 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:28:33 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:28:33 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:28:33 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:28:34 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:28:34 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:28:34 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:28:34 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:28:34 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:28:34 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839197; transaction id 3146
+2026-06-19 20:28:34 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:28:34 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:28:34 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:28:34
+2026-06-19 20:28:34 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:28:34 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:28:34 0 [ERROR] Aborting
+2026-06-19 20:35:01 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 10652
+2026-06-19 20:35:01 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:35:01 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:35:01 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:35:01 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:35:01 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:35:01 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:35:01 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:35:01 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:35:01 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:35:01 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:35:01 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:35:01 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:35:01 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839206; transaction id 3146
+2026-06-19 20:35:01 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:35:01 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:35:01 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:35:01
+2026-06-19 20:35:01 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:35:01 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:35:01 0 [ERROR] Aborting
+2026-06-19 20:37:30 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 22876
+2026-06-19 20:37:30 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:37:30 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:37:30 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:37:30 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:37:30 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:37:30 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:37:30 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:37:30 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:37:30 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:37:30 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:37:30 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:37:30 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:37:30 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839215; transaction id 3146
+2026-06-19 20:37:30 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:37:30 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:37:30 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:37:30
+2026-06-19 20:37:30 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:37:30 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:37:30 0 [ERROR] Aborting
+2026-06-19 20:41:50 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 23360
+2026-06-19 20:41:50 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:41:50 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:41:50 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:41:50 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:41:50 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:41:50 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:41:50 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:41:50 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:41:50 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:41:50 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:41:50 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:41:50 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:41:50 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839224; transaction id 3146
+2026-06-19 20:41:50 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:41:50 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:41:50 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:41:50
+2026-06-19 20:41:50 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:41:50 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:41:50 0 [ERROR] Aborting
+2026-06-19 20:43:03 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 23732
+2026-06-19 20:43:03 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:43:03 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:43:03 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:43:03 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:43:03 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:43:03 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:43:03 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:43:03 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:43:03 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:43:03 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:43:03 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:43:03 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:43:03 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839233; transaction id 3146
+2026-06-19 20:43:03 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:43:03 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:43:03 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:43:03
+2026-06-19 20:43:03 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:43:03 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:43:03 0 [ERROR] Aborting
+2026-06-19 20:44:20 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 24328
+2026-06-19 20:44:20 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:44:20 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:44:20 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:44:20 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:44:20 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:44:20 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:44:20 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:44:20 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:44:20 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:44:20 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:44:20 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:44:20 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:44:20 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839242; transaction id 3146
+2026-06-19 20:44:20 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:44:20 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:44:20 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:44:20
+2026-06-19 20:44:20 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:44:20 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:44:20 0 [ERROR] Aborting
+2026-06-19 20:44:33 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 25180
+2026-06-19 20:44:33 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:44:33 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:44:33 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:44:33 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:44:33 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:44:33 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:44:33 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:44:33 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:44:33 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:44:33 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:44:33 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:44:33 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:44:33 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839251; transaction id 3146
+2026-06-19 20:44:33 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:44:33 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:44:33 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:44:33
+2026-06-19 20:44:33 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:44:33 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:44:33 0 [ERROR] Aborting
+2026-06-19 20:44:58 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 10560
+2026-06-19 20:44:58 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:44:58 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:44:58 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:44:58 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:44:58 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:44:58 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:44:58 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:44:58 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:44:58 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:44:58 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:44:58 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:44:58 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:44:58 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839260; transaction id 3146
+2026-06-19 20:44:58 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:44:58 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:44:58 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:44:58
+2026-06-19 20:44:58 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:44:58 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:44:58 0 [ERROR] Aborting
+2026-06-19 20:48:19 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 6152
+2026-06-19 20:48:19 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:48:19 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:48:19 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:48:19 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:48:19 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:48:19 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:48:19 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:48:19 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:48:19 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:48:19 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:48:19 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:48:19 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:48:19 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839269; transaction id 3146
+2026-06-19 20:48:19 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:48:19 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:48:19 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:48:19
+2026-06-19 20:48:19 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:48:19 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:48:19 0 [ERROR] Aborting
+2026-06-19 20:50:40 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 4596
+2026-06-19 20:50:40 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:50:40 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:50:40 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:50:40 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:50:40 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:50:40 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:50:40 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:50:40 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:50:40 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:50:40 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:50:40 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:50:40 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:50:40 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839278; transaction id 3146
+2026-06-19 20:50:40 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:50:40 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:50:40 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:50:40
+2026-06-19 20:50:40 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:50:40 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:50:40 0 [ERROR] Aborting
+2026-06-19 20:55:12 0 [Note] Starting MariaDB 10.4.32-MariaDB source revision c4143f909528e3fab0677a28631d10389354c491 as process 9776
+2026-06-19 20:55:12 0 [Note] InnoDB: Mutexes and rw_locks use Windows interlocked functions
+2026-06-19 20:55:12 0 [Note] InnoDB: Uses event mutexes
+2026-06-19 20:55:12 0 [Note] InnoDB: Compressed tables use zlib 1.3
+2026-06-19 20:55:12 0 [Note] InnoDB: Number of pools: 1
+2026-06-19 20:55:12 0 [Note] InnoDB: Using SSE2 crc32 instructions
+2026-06-19 20:55:12 0 [Note] InnoDB: Initializing buffer pool, total size = 128M, instances = 1, chunk size = 128M
+2026-06-19 20:55:12 0 [Note] InnoDB: Completed initialization of buffer pool
+2026-06-19 20:55:12 0 [Note] InnoDB: 128 out of 128 rollback segments are active.
+2026-06-19 20:55:12 0 [Note] InnoDB: Creating shared tablespace for temporary tables
+2026-06-19 20:55:12 0 [Note] InnoDB: Setting file '.\ibtmp1' size to 12 MB. Physically writing the file full; Please wait ...
+2026-06-19 20:55:12 0 [Note] InnoDB: File '.\ibtmp1' size is now 12 MB.
+2026-06-19 20:55:12 0 [Note] InnoDB: Waiting for purge to start
+2026-06-19 20:55:12 0 [Note] InnoDB: 10.4.32 started; log sequence number 1839287; transaction id 3146
+2026-06-19 20:55:12 0 [Note] InnoDB: Loading buffer pool(s) from c:\xampp\mysql\data\ib_buffer_pool
+2026-06-19 20:55:12 0 [Note] Plugin 'FEEDBACK' is disabled.
+2026-06-19 20:55:12 0 [Note] InnoDB: Buffer pool(s) load completed at 260619 20:55:12
+2026-06-19 20:55:12 0 [Note] Server socket created on IP: '::'.
+2026-06-19 20:55:12 0 [ERROR] Fatal error: Can't open and lock privilege tables: Incorrect file format 'roles_mapping'
+2026-06-19 20:55:12 0 [ERROR] Aborting

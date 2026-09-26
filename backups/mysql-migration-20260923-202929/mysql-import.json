@@ -1,0 +1,371 @@
+[
+{
+  "model": "accounts.referencesequence",
+  "pk": 1,
+  "fields": {
+    "key": "monitoring.incident:INC-2026-",
+    "value": 3
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$C9QbrQeOo9gL62E5aqzGf1$s4p5zkBjjCUXrDoTlvNgfPPkSKlqwkSlq2XPKH6LJdE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "manager",
+    "first_name": "Dormitory",
+    "last_name": "Manager",
+    "email": "manager@example.test",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-08-18T10:50:32.258Z",
+    "role": "manager",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$lUlfzvJkpsgaTKZaHup3y1$60XN26mgxOW6BnBDe3zJ6BFzRcttuWmSzgmpc28Y/P8=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "System",
+    "last_name": "Administrator",
+    "email": "admin@example.test",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-08-18T10:50:34.675Z",
+    "role": "admin",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "tenants.room",
+  "pk": 1,
+  "fields": {
+    "number": "101",
+    "floor": 1,
+    "capacity": 4,
+    "description": "East wing",
+    "is_active": true
+  }
+},
+{
+  "model": "tenants.room",
+  "pk": 2,
+  "fields": {
+    "number": "102",
+    "floor": 1,
+    "capacity": 3,
+    "description": "East wing",
+    "is_active": true
+  }
+},
+{
+  "model": "tenants.room",
+  "pk": 3,
+  "fields": {
+    "number": "201",
+    "floor": 2,
+    "capacity": 4,
+    "description": "North wing",
+    "is_active": true
+  }
+},
+{
+  "model": "tenants.tenant",
+  "pk": 1,
+  "fields": {
+    "reference": "TEN-2026-0001",
+    "first_name": "Jordan",
+    "last_name": "Lee",
+    "email": "jordan.lee@example.test",
+    "phone": "09170000001",
+    "emergency_contact": "",
+    "room": 1,
+    "enrolled_on": "2026-08-18",
+    "move_in_date": "2026-08-18",
+    "is_active": true,
+    "notes": ""
+  }
+},
+{
+  "model": "tenants.tenant",
+  "pk": 2,
+  "fields": {
+    "reference": "TEN-2026-0002",
+    "first_name": "Casey",
+    "last_name": "Santos",
+    "email": "casey.santos@example.test",
+    "phone": "09170000002",
+    "emergency_contact": "",
+    "room": 2,
+    "enrolled_on": "2026-08-18",
+    "move_in_date": "2026-08-18",
+    "is_active": true,
+    "notes": ""
+  }
+},
+{
+  "model": "monitoring.camerasource",
+  "pk": 1,
+  "fields": {
+    "name": "Lobby browser camera",
+    "source_type": "webcam",
+    "location": "Main lobby",
+    "stream_url": "",
+    "room": null,
+    "is_enabled": true
+  }
+},
+{
+  "model": "monitoring.camerasource",
+  "pk": 2,
+  "fields": {
+    "name": "room 1",
+    "source_type": "webcam",
+    "location": "ground floor",
+    "stream_url": "",
+    "room": 1,
+    "is_enabled": true
+  }
+},
+{
+  "model": "monitoring.incident",
+  "pk": 1,
+  "fields": {
+    "reference": "INC-2026-0001",
+    "incident_type": "manual",
+    "status": "assigned",
+    "confidence": null,
+    "details": "Sample verified quiet-hours report.",
+    "detected_labels": [],
+    "occurred_at": "2026-08-18T10:50:37.244Z",
+    "snapshot": "",
+    "source": 1,
+    "source_name": "Lobby browser camera",
+    "room": 1,
+    "verified_by": [
+      "manager"
+    ],
+    "verified_at": "2026-08-18T10:50:37.242Z",
+    "assigned_tenant": 1,
+    "review_notes": "Seeded manager verification."
+  }
+},
+{
+  "model": "monitoring.incident",
+  "pk": 2,
+  "fields": {
+    "reference": "INC-2026-0002",
+    "incident_type": "bottle",
+    "status": "reviewed",
+    "confidence": null,
+    "details": "FGFGN",
+    "detected_labels": [],
+    "occurred_at": "2026-08-19T09:37:45.899Z",
+    "snapshot": "",
+    "source": null,
+    "source_name": "",
+    "room": 1,
+    "verified_by": null,
+    "verified_at": null,
+    "assigned_tenant": null,
+    "review_notes": "Reviewed in incident queue."
+  }
+},
+{
+  "model": "monitoring.incident",
+  "pk": 3,
+  "fields": {
+    "reference": "INC-2026-0003",
+    "incident_type": "person",
+    "status": "dismissed",
+    "confidence": null,
+    "details": "tenant",
+    "detected_labels": [],
+    "occurred_at": "2026-09-18T09:32:32.428Z",
+    "snapshot": "",
+    "source": null,
+    "source_name": "",
+    "room": null,
+    "verified_by": [
+      "manager"
+    ],
+    "verified_at": "2026-09-18T09:32:52.350Z",
+    "assigned_tenant": null,
+    "review_notes": "Dismissed by manager."
+  }
+},
+{
+  "model": "monitoring.videojob",
+  "pk": 1,
+  "fields": {
+    "video": "uploads/videos/2026/09/videoplayback.mp4",
+    "source_name": "Uploaded corridor video",
+    "room": null,
+    "status": "completed",
+    "frames_processed": 12,
+    "incidents_created": 0,
+    "error": "",
+    "created_by": [
+      "manager"
+    ],
+    "created_at": "2026-09-18T10:02:49.860Z",
+    "completed_at": "2026-09-18T10:02:50.681Z"
+  }
+},
+{
+  "model": "monitoring.videojob",
+  "pk": 2,
+  "fields": {
+    "video": "uploads/videos/2026/09/videoplayback_TDPF3os.mp4",
+    "source_name": "Uploaded corridor video",
+    "room": null,
+    "status": "completed",
+    "frames_processed": 12,
+    "incidents_created": 0,
+    "error": "",
+    "created_by": [
+      "manager"
+    ],
+    "created_at": "2026-09-18T10:02:56.111Z",
+    "completed_at": "2026-09-18T10:02:56.512Z"
+  }
+},
+{
+  "model": "monitoring.videojob",
+  "pk": 3,
+  "fields": {
+    "video": "uploads/videos/2026/09/videoplayback_hJXrO7j.mp4",
+    "source_name": "Uploaded corridor video",
+    "room": null,
+    "status": "completed",
+    "frames_processed": 12,
+    "incidents_created": 0,
+    "error": "",
+    "created_by": [
+      "manager"
+    ],
+    "created_at": "2026-09-18T10:03:51.051Z",
+    "completed_at": "2026-09-18T10:03:51.448Z"
+  }
+},
+{
+  "model": "violations.dormitoryrule",
+  "pk": 1,
+  "fields": {
+    "code": "DR-001",
+    "title": "Quiet hours",
+    "category": "Conduct",
+    "description": "Keep noise to a minimum from 10:00 PM to 7:00 AM.",
+    "severity": "medium",
+    "is_active": true,
+    "created_at": "2026-08-18T10:50:37.033Z"
+  }
+},
+{
+  "model": "violations.dormitoryrule",
+  "pk": 2,
+  "fields": {
+    "code": "DR-002",
+    "title": "No alcohol containers",
+    "category": "Safety",
+    "description": "Alcoholic drinks and their containers are prohibited in residence areas.",
+    "severity": "high",
+    "is_active": true,
+    "created_at": "2026-08-18T10:50:37.045Z"
+  }
+},
+{
+  "model": "violations.dormitoryrule",
+  "pk": 3,
+  "fields": {
+    "code": "DR-003",
+    "title": "Fire safety",
+    "category": "Safety",
+    "description": "Open flames, smoking, and tampering with fire equipment are prohibited.",
+    "severity": "critical",
+    "is_active": true,
+    "created_at": "2026-08-18T10:50:37.057Z"
+  }
+},
+{
+  "model": "violations.dormitoryrule",
+  "pk": 4,
+  "fields": {
+    "code": "DR-004",
+    "title": "Guest registration",
+    "category": "Security",
+    "description": "All visitors must be registered and follow guest hours.",
+    "severity": "medium",
+    "is_active": true,
+    "created_at": "2026-08-18T10:50:37.068Z"
+  }
+},
+{
+  "model": "violations.warning",
+  "pk": 1,
+  "fields": {
+    "reference": "WRN-2026-0001",
+    "tenant": 1,
+    "rule": 1,
+    "incident": 1,
+    "message": "Please observe quiet hours.",
+    "issued_by": [
+      "manager"
+    ],
+    "issued_at": "2026-08-18T10:50:37.260Z",
+    "acknowledged": false
+  }
+},
+{
+  "model": "violations.warning",
+  "pk": 2,
+  "fields": {
+    "reference": "WRN-2026-0002",
+    "tenant": 1,
+    "rule": 2,
+    "incident": null,
+    "message": "GNG",
+    "issued_by": [
+      "manager"
+    ],
+    "issued_at": "2026-08-19T09:38:08.954Z",
+    "acknowledged": false
+  }
+},
+{
+  "model": "violations.violation",
+  "pk": 1,
+  "fields": {
+    "reference": "VIO-2026-0001",
+    "tenant": 1,
+    "rule": 1,
+    "incident": 1,
+    "description": "Verified repeat noise report for demonstration.",
+    "action_taken": "Manager counselling",
+    "evidence": "",
+    "recorded_by": [
+      "manager"
+    ],
+    "recorded_at": "2026-08-18T10:50:37.280Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "d524a6fec06b2bc76ab944fb95c2d8ae82c0dfc1",
+  "fields": {
+    "user": [
+      "manager"
+    ],
+    "created": "2026-09-18T11:13:31.647Z"
+  }
+}
+]
