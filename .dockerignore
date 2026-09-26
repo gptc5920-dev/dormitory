@@ -1,0 +1,13 @@
+.git
+.mysql-local
+backups
+config/database.local.json
+db.sqlite3
+media
+models
+staticfiles
+**/__pycache__
+*.pyc
+*.log
+.env
+.env.*
