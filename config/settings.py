@@ -8,7 +8,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "development-only-change-me")
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
-ALLOWED_HOSTS = [host.strip() for host in os.environ.get("DJANGO_ALLOWED_HOSTS","ickwwsoogco44cwoskc4kcgw.76.13.217.76.sslip.io", "127.0.0.1,localhost").split(",") if host.strip()]
+ALLOWED_HOSTS = ALLOWED_HOSTS = [
+    'ickwwsoogco44cwoskc4kcgw.76.13.217.76.sslip.io',
+    'localhost',
+    '127.0.0.1',
+]
 if not DEBUG and (SECRET_KEY == "development-only-change-me" or len(SECRET_KEY) < 50):
     raise ImproperlyConfigured("Set DJANGO_SECRET_KEY to a unique secret of at least 50 characters in production.")
 
