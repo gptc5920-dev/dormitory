@@ -14,3 +14,4 @@ export CC=/usr/bin/gcc
 
 python -m pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
 python -m pip install -r requirements.txt
+python -m pip check

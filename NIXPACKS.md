@@ -9,7 +9,13 @@ Set Ports Exposes to `8000` and deploy the latest commit.
 The configuration installs the MariaDB client headers and pkg-config needed to
 compile mysqlclient. These client libraries work with the application's MySQL
 server. It installs CPU PyTorch wheels and verifies the native Python imports
-during the build. The startup script runs migrations, collects static files,
+during the build. Runtime OpenSSL, database, and OpenCV libraries are explicitly
+listed in `nixLibs` so Nix Python can locate them. Installing Apt development
+packages alone does not configure Nix's runtime library search path.
+`python nixpacks-check.py` checks each dependency independently and reports all
+failures, without connecting to the database. Installation also runs `pip check`
+to detect incompatible package dependencies.
+The startup script runs migrations, collects static files,
 and starts Gunicorn on `0.0.0.0:8000`.
 
 Configure runtime environment variables in Coolify:

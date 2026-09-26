@@ -4,6 +4,8 @@ providers = ["python"]
 YOLO_CONFIG_DIR = "/tmp/ultralytics"
 
 [phases.setup]
+# Nix Python needs runtime libraries on its own loader path as well as Apt headers.
+nixLibs = ["...", "openssl", "libmysqlclient", "libGL", "glib", "xorg.libX11", "xorg.libXext", "xorg.libSM", "xorg.libICE"]
 aptPkgs = ["...", "build-essential", "pkg-config", "libmariadb-dev", "libgl1", "libglib2.0-0"]
 
 [phases.install]
@@ -14,7 +16,7 @@ cmds = ["sh nixpacks-install.sh"]
 [phases.build]
 dependsOn = ["install"]
 cmds = [
-    "python -c 'import MySQLdb; import cv2; import torch'",
+    "python nixpacks-check.py",
     "sed -i 's/\\r$//' entrypoint.sh",
 ]
 
