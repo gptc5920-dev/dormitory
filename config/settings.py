@@ -8,11 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "development-only-change-me")
 DEBUG = os.environ.get("DJANGO_DEBUG", "1") == "1"
-ALLOWED_HOSTS = ALLOWED_HOSTS = [
-    'ickwwsoogco44cwoskc4kcgw.76.13.217.76.sslip.io',
-    'localhost',
-    '127.0.0.1',
-]
+ALLOWED_HOSTS = [host.strip() for host in os.environ.get(
+    "DJANGO_ALLOWED_HOSTS", "api.dormitorykc.online,dormitorykc.online,localhost,127.0.0.1"
+).split(",") if host.strip()]
 if not DEBUG and (SECRET_KEY == "development-only-change-me" or len(SECRET_KEY) < 50):
     raise ImproperlyConfigured("Set DJANGO_SECRET_KEY to a unique secret of at least 50 characters in production.")
 
@@ -119,7 +117,7 @@ X_FRAME_OPTIONS = "DENY"
 CORS_ALLOWED_ORIGINS = [origin.strip() for origin in os.environ.get(
     "CORS_ALLOWED_ORIGINS",
     "http://localhost:5173,http://127.0.0.1:5173,"
-    "http://vw808c8k4o004o0cc0ws8w4s.76.13.217.76.sslip.io"
+    "https://dormitorykc.online"
 ).split(",") if origin.strip()]
 
 REST_FRAMEWORK = {

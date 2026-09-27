@@ -27,7 +27,7 @@ class FrontendCorsTests(SimpleTestCase):
         )
 
     def test_deployed_frontend_can_preflight_login(self):
-        origin = "http://vw808c8k4o004o0cc0ws8w4s.76.13.217.76.sslip.io"
+        origin = "https://dormitorykc.online"
         response = self.preflight(origin)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.headers["Access-Control-Allow-Origin"], origin)
