@@ -45,4 +45,11 @@ instance is too old for the current Django version. Configure persistent
 storage for `/app/media` and, if using uploaded model weights, `/app/models`.
 This repository deploys the backend API; the frontend is a separate project.
 
+Tenant face photos and their matching vectors are stored in the database and
+returned only through authenticated manager API calls. Back up the database
+as sensitive resident data. The bundled OpenCV YuNet and SFace models power
+camera match suggestions; a match is never used to assign an incident
+automatically. Staff should confirm identity before taking action. Keep the
+model files under `face_models/` in the deployed backend image.
+
 Reference: https://nixpacks.com/docs/configuration/file

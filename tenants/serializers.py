@@ -37,6 +37,7 @@ class RoomSerializer(serializers.ModelSerializer):
 class TenantSerializer(serializers.ModelSerializer):
     full_name = serializers.CharField(read_only=True)
     room_number = serializers.CharField(source="room.number", read_only=True)
+    has_face_photo = serializers.SerializerMethodField()
     is_active = serializers.BooleanField(required=False, default=True)
 
     class Meta:
@@ -44,6 +45,7 @@ class TenantSerializer(serializers.ModelSerializer):
         fields = [
             "id", "reference", "first_name", "last_name", "full_name", "email", "phone",
             "emergency_contact", "room", "room_number", "enrolled_on", "move_in_date", "is_active", "notes",
+            "has_face_photo",
         ]
         read_only_fields = ["reference", "enrolled_on"]
 
@@ -59,6 +61,9 @@ class TenantSerializer(serializers.ModelSerializer):
             if occupied.count() >= room.capacity:
                 raise serializers.ValidationError({"room": "This room is already at capacity."})
         return attrs
+
+    def get_has_face_photo(self, obj):
+        return hasattr(obj, "face")
 
 
 class RoomFilterSerializer(serializers.Serializer):

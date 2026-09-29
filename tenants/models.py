@@ -66,3 +66,10 @@ class Tenant(models.Model):
             self.reference = next_reference(Tenant, "TEN")
         self.full_clean()
         return super().save(*args, **kwargs)
+
+
+class TenantFace(models.Model):
+    tenant = models.OneToOneField(Tenant, on_delete=models.CASCADE, related_name="face")
+    photo = models.BinaryField()
+    embedding = models.JSONField()
+    updated_at = models.DateTimeField(auto_now=True)

@@ -1,9 +1,12 @@
 from unittest.mock import patch
+import base64
 
+import cv2
 import numpy as np
 from rest_framework.test import APITestCase
 
 from accounts.models import User
+from .ip_camera import CameraFrameUnavailable
 from .models import CameraSource
 
 
@@ -29,27 +32,28 @@ class NetworkCameraTests(APITestCase):
             self.assertEqual(response.status_code, 400)
 
     @patch("monitoring.views.detector.detect")
-    @patch("monitoring.views.cv2.VideoCapture")
-    def test_preview_and_detection_release_capture(self, capture_type, detect):
-        capture = capture_type.return_value
-        capture.read.return_value = (True, np.zeros((16, 16, 3), dtype=np.uint8))
+    @patch("monitoring.views.camera_frames.get_frame")
+    def test_preview_and_detection_use_latest_frame(self, get_frame, detect):
+        get_frame.return_value = np.zeros((720, 1280, 3), dtype=np.uint8)
         detect.return_value = []
-        response = self.client.post(self.endpoint + "snapshot/", {"detect": False}, format="json")
+        response = self.client.post(self.endpoint + "snapshot/", {"detect": False, "preview_width": 640}, format="json")
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response.data["image"].startswith("data:image/jpeg;base64,"))
+        encoded = base64.b64decode(response.data["image"].split(",", 1)[1])
+        self.assertEqual(cv2.imdecode(np.frombuffer(encoded, dtype=np.uint8), cv2.IMREAD_COLOR).shape[:2], (360, 640))
         detect.assert_not_called()
-        capture.release.assert_called_once()
+        get_frame.assert_called_once()
         response = self.client.post(self.endpoint + "snapshot/", {"detect": True}, format="json")
         self.assertEqual(response.status_code, 200)
         detect.assert_called_once()
 
-    @patch("monitoring.views.cv2.VideoCapture")
-    def test_unreachable_camera_and_access_controls(self, capture_type):
-        capture_type.return_value.open.return_value = False
+    @patch("monitoring.views.camera_frames.get_frame")
+    def test_unreachable_camera_and_access_controls(self, get_frame):
+        get_frame.side_effect = CameraFrameUnavailable("No frame")
         response = self.client.post(self.endpoint + "snapshot/")
         self.assertEqual(response.status_code, 502)
         self.assertNotIn("secret", str(response.data))
-        capture_type.return_value.release.assert_called_once()
+        self.assertEqual(self.client.post(self.endpoint + "snapshot/", {"preview_width": 100}, format="json").status_code, 400)
         self.source.is_enabled = False
         self.source.save()
         self.assertEqual(self.client.post(self.endpoint + "snapshot/").status_code, 400)
